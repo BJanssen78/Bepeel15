@@ -1,5 +1,6 @@
 const API_Prefix ='?api_key='
 const API_KEY = '88efa1821e2005eaec008f2eb5efbc36';
+const genreArray = [];
 
 export async function getData(){
     try {
@@ -8,7 +9,13 @@ export async function getData(){
     const res = await fetch(apiUrl)
  
     .then((response) => response.json())
-    .then((data) => console.log(data));
+    .then((data) => {
+        console.log(data)
+        genreArray.push(Object.values(data))
+        console.log(genreArray);
+    }
+    
+    );
     }
     catch (error){
         console.log(error);
