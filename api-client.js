@@ -1,5 +1,5 @@
 const API_Prefix ='?api_key='
-const API_KEY = '88efa1821e2005eaec008f2eb5efbc36';
+const API_KEY = '';
 const genreArray = [];
 
 export async function getData(){
