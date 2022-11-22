@@ -1,5 +1,5 @@
 const API_Prefix ='?api_key='
-const API_KEY = '';
+const API_KEY = '88efa1821e2005eaec008f2eb5efbc36';
 const genreArray = [];
 
 const container = document.getElementById('container');
@@ -16,7 +16,6 @@ const showDataList = function(name, id){
 export async function getData(){
     try {
     const apiUrl = `https://api.themoviedb.org/3/genre/movie/list${API_Prefix}${API_KEY}`;
-    // console.log(apiUrl);
     const res = await fetch(apiUrl)
  
     .then((response) => response.json())
