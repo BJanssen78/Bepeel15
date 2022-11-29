@@ -1,0 +1,12 @@
+#content{
+    text-align: center;
+}
+.img-poster{
+    // padding: 10px;
+    border: 10px solid transparent;
+
+    &:hover{
+        border: 10px solid blue;
+        cursor: pointer;
+    }
+}

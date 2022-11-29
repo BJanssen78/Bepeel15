@@ -2,10 +2,26 @@
 const content = document.getElementById('content');
 const btns = document.querySelectorAll('#navigatie .nav-btn');
 
+let basisContent = randomPersonData.forEach(function(e){
+    let createTiles = document.createElement('img');
+    content.appendChild(createTiles);
+    createTiles.setAttribute('class', 'img-poster');
+    createTiles.setAttribute('alt', e.name);
+    createTiles.setAttribute('src', e.photo);
+});
+
+// let createCountryList = randomPersonData.forEach(country => country.region);
+
+
+
 // functions
-const createList = function(eventName){
+const clearList = function(){
     content.replaceChildren();
-    
+}
+
+const createList = function(eventName){
+    clearList();
+
     let createTitle = document.createElement('h1');
     content.appendChild(createTitle);
     createTitle.innerHTML = eventName;
@@ -15,7 +31,13 @@ const createList = function(eventName){
 
     content.appendChild(createUL);
     createUL.appendChild(createLi);
+    let coutryList = randomPersonData.forEach((country) => {
+        createUL.appendChild(createLi);
+        createLi.innerHTML = country.region;
+    } );
+    // createLi.innerHTML = coutryList;
 }
+
 
 // Event listeners
 Array.from(btns).forEach(function(btn){
@@ -23,6 +45,7 @@ Array.from(btns).forEach(function(btn){
         let eventName = btnEvent.target.innerHTML;
         // console.log(eventName);
         // return (eventName);
-        createList(eventName)
+        createList(eventName);
+
     })
 });

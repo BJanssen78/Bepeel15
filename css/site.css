@@ -1,0 +1,11 @@
+#content {
+  text-align: center;
+}
+
+.img-poster {
+  border: 10px solid transparent;
+}
+.img-poster:hover {
+  border: 10px solid blue;
+  cursor: pointer;
+}/*# sourceMappingURL=site.css.map */
