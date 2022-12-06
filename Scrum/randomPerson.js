@@ -58,12 +58,12 @@ const getCountriesWithAmountOfPeople = (personData, eventName) =>{
 
 const clearList = function(){
     content.replaceChildren();
-}
+};
 const createListTitle = function(eventName){
     let createTitle = document.createElement('h1');
     content.appendChild(createTitle);
     createTitle.innerHTML = eventName;
-}
+};
 
 const showPersonsByCountry = function(eventName,countryItem){
     clearList();
